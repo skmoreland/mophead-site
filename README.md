@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Mophead Art
+
+## Fonts
+
+Options: 
+* font-family: 'Gluten', cursive;
+* font-family: 'Lobster', cursive;
+* font-family: 'Noto Serif', serif;
+* font-family: 'Permanent Marker', cursive
+* font-family: 'Gloria Hallelujah', cursive;

@@ -16,11 +16,23 @@ function Contact() {
             <div class="grid gap-6 md:grid-cols-2 text-2xl">
                 <div className="flex items-center">
                     <img src={email} alt="Email" className={icon_size}/>
-                    <h1 className="pl-4">zmshay2@gmail.com</h1>
+                    <a 
+                        className="hover:text-emerald-700"
+                        href="mailto: zmshay2@gmail.com" 
+                        target="_blank" 
+                        rel="noreferrer noopener"><
+                            b>zmshay2@gmail.com</b>
+                    </a> 
                 </div>
                 <div className="flex items-center">
                     <img src={insta} alt="Instagram" className={icon_size}/>
-                    <h1 className="pl-4">@mophead.art</h1>
+                    <a 
+                        className="hover:text-emerald-700"
+                        href="https://www.instagram.com/mophead.art/" 
+                        target="_blank" 
+                        rel="noreferrer noopener"><
+                            b>@mophead.art</b>
+                    </a>
                 </div>
             </div>
         </div>

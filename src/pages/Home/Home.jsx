@@ -18,7 +18,7 @@ function Home() {
             </div>
         </div>
         <div className="flex items-center place-content-center">
-            <div className="p-8 bg-white -mr-60 z-10 w-1/3 bg-indigo-900 rounded">
+            <div className="p-8 -mr-60 z-10 w-1/3 bg-indigo-900 rounded">
                 <h1 className="text-3xl">My Art</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

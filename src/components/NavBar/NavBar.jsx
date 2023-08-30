@@ -5,7 +5,7 @@ const NavBar = () => {
         <div className = "text-2xl lg:text-3xl" >
             <Link to="/">Mophead Art</Link>
         </div>
-        <div className = "flex justify-between space-x-12 decoration-4 underline-offset-4 lg:text-xl">
+        <div className = "flex justify-between space-x-12 px-4 decoration-4 underline-offset-4 lg:text-xl">
               <Link to="/" className="decoration-prime-red hover:underline hover:underline">About</Link>
               <Link to="/available-art" className="decoration-prime-red hover:underline hover:underline">Available Artwork</Link>
               <Link to="/shop" className="decoration-prime-red hover:underline hover:underline">Shop</Link>

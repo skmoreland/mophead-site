@@ -1,6 +1,14 @@
+import ArchivedArt from "../../components/ArchivedArt/ArchivedArt";
+
 function Archive() {
     return (
-    <div className="Archive">
+    <div className="Archive font-marker m-16">
+      <div>
+          <h1 className="text-6xl text-pink-600 text-center">
+              Archived Works
+          </h1>
+      </div>
+      <ArchivedArt />
     </div>
   );
 }

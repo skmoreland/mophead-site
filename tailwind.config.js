@@ -5,11 +5,14 @@ module.exports = {
     fontFamily: {
       gluten: ['Gluten'],
       gloria: ['Gloria Hallelujah'],
-      lobster: ['Lobster'],
       noto: ['Noto Serif'], 
       marker: ['Permanent Marker'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'rose': ['#C37DA1']
+      }
+    },
   },
   plugins: [],
 }

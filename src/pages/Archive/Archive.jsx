@@ -1,4 +1,4 @@
-import ArchivedArt from "../../components/ArchivedArt/ArchivedArt";
+import ArchivedArt from "../../components/ArchivedArtList/ArchivedArtList";
 
 function Archive() {
     return (

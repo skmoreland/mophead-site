@@ -25,7 +25,6 @@ const ArchivedArt = () => {
             {
             listOfImages.map(
                     (image, index) =>    
-                        // <ArchivedArtComponent image={image} index={index} imageNames={imageNames}/>
                         <div class={`m-8 bg-pink-600 rounded text-transparent hover:text-white text-left relative group`}>
                             <img 
                                 key={index} 
@@ -54,7 +53,7 @@ const ArchivedArt = () => {
                         <img 
                             src={exitIcon}
                             alt="Close"
-                            className="w-12"
+                            className="w-12 hover:fill-black"
                         />
                     </button>
                 </div>

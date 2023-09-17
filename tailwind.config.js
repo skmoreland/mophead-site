@@ -6,7 +6,10 @@ module.exports = {
       gluten: ['Gluten'],
       gloria: ['Gloria Hallelujah'],
       noto: ['Noto Serif'], 
-      marker: ['Permanent Marker'],
+      marker: ['Barrio'],
+      mooli: ['Mooli'],
+      title: ['Barrio'],
+      body: ['Mooli']
     },
     extend: {
       colors: {

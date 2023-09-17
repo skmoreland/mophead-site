@@ -6,7 +6,7 @@ const icon_size = "h-60 lg:h-20 lg:w-20"
 
 function Contact() {
     return (
-    <div className="Contact m-16 font-marker text-left space-y-8">
+    <div className="Contact m-16 font-title text-left space-y-8">
 
         <h1 className="text-6xl pb-4 text-center text-emerald-700">Contact Me</h1>
         <div>

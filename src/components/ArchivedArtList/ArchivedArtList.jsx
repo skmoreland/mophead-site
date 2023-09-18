@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import exitIcon from '../../assets/images/exit-icon.svg'
+import exitIcon from '../../assets/images/exit-icon3.svg'
 var listOfImages =[];
 var imageNames = [];
 var popupImage = "";
@@ -40,7 +40,7 @@ const ArchivedArt = () => {
                     )
             }
             {showModal && (
-                <div className="fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+                <div className="fixed top-0 left-0 z-[1000] w-screen h-screen bg-black/70 flex justify-center items-center">
                     <img
                         src={popupImage}
                         alt="popup"
@@ -53,7 +53,7 @@ const ArchivedArt = () => {
                         <img 
                             src={exitIcon}
                             alt="Close"
-                            className="w-12 hover:fill-black"
+                            className="w-20 hover:fill-black"
                         />
                     </button>
                 </div>

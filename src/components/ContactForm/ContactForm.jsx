@@ -19,7 +19,7 @@ const ContactForm = () => {
     }
     return (
         <form 
-            class="font-title text-left text-lg space-y-4"
+            class="font-body text-left text-lg space-y-4"
             onSubmit={handleSubmit}>
             <div>
                 <h1>Name</h1>
@@ -72,13 +72,14 @@ const ContactForm = () => {
                         name="message"
                         onChange={handleChange} 
                         class="bg-emerald-50 border border-emerald-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-700 
-                        focus:border-emerald-700 block w-full p-2.5"/>
+                        focus:border-emerald-700 block w-full p-2.5 caret-emerald-900"/>
                 </label>
             </div>
             <button 
                 type="submit" 
-                class="shadow-lg shadow-emerald-500/50 px-10 py-2.5 text-lg text-center text-white 
-                bg-emerald-700 rounded-lg focus:ring-4 focus:ring-emerald-800 hover:bg-emerald-600">
+                class="shadow-lg shadow-emerald-500/50 px-10 py-4 text-lg text-center text-white 
+                bg-emerald-700 rounded-lg hover:bg-emerald-600
+                transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110">
                 Submit
             </button>
         </form>

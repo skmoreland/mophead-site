@@ -11,6 +11,10 @@ module.exports = {
       title: ['Barrio'],
       body: ['Mooli']
     },
+    safelist: [
+      'animate-[fade-in_1s_ease-in-out]', 
+      'animate-[fade-in-down_1s_ease-in-out]'
+    ],
     extend: {
       colors: {
         'rose': ['#C37DA1']

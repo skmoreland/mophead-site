@@ -11,31 +11,31 @@ function AppRouter() {
         <Routes>
             <Route exact path="/" element={
                 <div>
-                    <NavBar color="shadow-indigo-900"/>
+                    <NavBar color="shadow-indigo-900" selectedPage="home"/>
                     <Home/>
                 </div>
             }/>
             <Route path="/available-art" element={
                <div>
-                    <NavBar color="shadow-fuchsia-800"/>
+                    <NavBar color="shadow-fuchsia-800" selectedPage="available-art"/>
                     <AvailableArt/>
                 </div>
             }/>
             <Route path="/archive" element={
                 <div>
-                    <NavBar color="shadow-pink-500"/>
+                    <NavBar color="shadow-pink-500" selectedPage="archive"/>
                     <Archive/>
                 </div>
             }/>
             <Route path="/shop" element={
                <div>
-                    <NavBar color="shadow-[#834D69]"/>
+                    <NavBar color="shadow-[#834D69]" selectedPage="shop"/>
                     <Shop/>
                 </div>
             }/>
             <Route path="/contact" element={
                 <div>
-                    <NavBar color="shadow-emerald-700"/>
+                    <NavBar color="shadow-emerald-700" selectedPage="contact"/>
                     <Contact/>
                 </div>
             }/>

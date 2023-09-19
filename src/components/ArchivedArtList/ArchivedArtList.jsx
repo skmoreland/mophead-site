@@ -1,49 +1,44 @@
 import React, { useState } from 'react';
 import exitIcon from '../../assets/images/exit-icon3.svg'
 import archiveJSON from '../../assets/archive/archive.json'
-var listOfImages =[];
 var popupImage = "";
 
-function importAll(r) {
-    return r.keys().map(r)
-}
-
-function componentWillMount() {
-    listOfImages = importAll(require.context('../../assets/archive/images', false, /\.(png|jpe?g|svg)$/));
-}
-
 const ArchivedArt = () => {
-    componentWillMount()
     const [showModal, setShowModal] = useState(false);
-    var transition = "transition-opacity duration-200 ease-in bg-opacity-100"
+    var transition = "transition-opacity duration-150 ease-in bg-opacity-100"
     function openModal(image) {
         setShowModal(showModal => !showModal);
         popupImage=image
     };
     return (
-        <div className="flex flex-wrap z-10">
+        <div className="flex flex-wrap z-10 pt-8">
             {
-            listOfImages.map(
-                    (image, index) =>    
+            archiveJSON.map(
+                    (item) =>    
                         <div class={`m-4 rounded text-transparent bg-teal-600
                             text-left relative group`} 
-                            onClick={()=>openModal(image)}>
+                            onClick={()=>openModal(item)}>
                             <img 
-                                key={index} 
-                                src={image} 
-                                alt="info" 
-                                className={`h-96 rounded ${transition} hover:opacity-25`} 
+                                key={item.title} 
+                                src={require(`../../assets/archive/images/${item.image}`)} 
+                                alt={item.title}
+                                className={`h-96 rounded ${transition} hover:opacity-25 text-white`} 
                             />
+                            
                         </div>
                     )
             }
             {showModal && (
                 <div className="fixed top-0 left-0 z-[1000] w-screen h-screen bg-black/70 flex justify-center items-center">
-                    <img
-                        src={popupImage}
-                        alt="popup"
-                        className="max-h-[800px] object-cover rounded"
-                    />
+                    <div className="space-y-4 text-white">
+                        <img
+                            src={require(`../../assets/archive/images/${popupImage.image}`)}
+                            alt="popup"
+                            className="max-h-[700px] object-cover rounded"
+                        />
+                        <h1 className="text-3xl">{popupImage.title}</h1>
+                        <h2 className="text-2xl">{popupImage.created}</h2>
+                    </div>
                     <button
                         onClick={openModal}
                         className="fixed z-90 top-6 right-8 text-white text-xl"

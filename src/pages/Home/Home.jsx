@@ -5,7 +5,7 @@ function Home() {
     return (
     <div className="Home m-16 font-title text-left text-white space-y-8">
         <h1 className="text-6xl text-teal-800 text-center">About Me</h1>
-        <div className="flex items-center place-content-center">
+        <div className="flex items-center place-content-center transition-opacity">
             <img src={town} alt="Town" className="w-1/2 rounded"/>
             <div className="p-8 -ml-60 bg-teal-800 w-1/3 rounded">
                 <h1 className="text-3xl mb-4">My Story</h1>
@@ -17,7 +17,7 @@ function Home() {
                 </p>
             </div>
         </div>
-        <div className="flex items-center place-content-center">
+        <div className="flex items-center place-content-center transition-opacity duration-1000 ease-out opacity-100 on-scroll:opacity-0">
             <div className="p-8 -mr-60 z-10 w-1/3 bg-teal-800 rounded">
                 <h1 className="text-3xl mb-4">My Art</h1>
                 <p className="font-body">

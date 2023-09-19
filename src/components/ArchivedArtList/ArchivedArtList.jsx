@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import exitIcon from '../../assets/images/exit-icon3.svg'
+import archiveJSON from '../../assets/archive/archive.json'
 var listOfImages =[];
-var imageNames = [];
 var popupImage = "";
+
 function importAll(r) {
-    imageNames = r.keys()
     return r.keys().map(r)
 }
 
 function componentWillMount() {
-    listOfImages = importAll(require.context('../../assets/archive/', false, /\.(png|jpe?g|svg)$/));
+    listOfImages = importAll(require.context('../../assets/archive/images', false, /\.(png|jpe?g|svg)$/));
 }
 
 const ArchivedArt = () => {
     componentWillMount()
     const [showModal, setShowModal] = useState(false);
-
+    var transition = "transition-opacity duration-200 ease-in bg-opacity-100"
     function openModal(image) {
         setShowModal(showModal => !showModal);
         popupImage=image
@@ -25,17 +25,15 @@ const ArchivedArt = () => {
             {
             listOfImages.map(
                     (image, index) =>    
-                        <div class={`m-4 bg-teal-600 rounded text-transparent hover:text-white text-left relative group`}>
+                        <div class={`m-4 rounded text-transparent bg-teal-600
+                            text-left relative group`} 
+                            onClick={()=>openModal(image)}>
                             <img 
                                 key={index} 
                                 src={image} 
                                 alt="info" 
-                                onClick={()=>openModal(image)}
-                                className="h-96 rounded hover:opacity-30" 
+                                className={`h-96 rounded ${transition} hover:opacity-25`} 
                             />
-                            <h3 className="absolute inset-x-0 bottom-0 m-4">
-                                    {imageNames[index]}
-                            </h3>
                         </div>
                     )
             }

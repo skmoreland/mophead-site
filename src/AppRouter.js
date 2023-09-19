@@ -23,19 +23,19 @@ function AppRouter() {
             }/>
             <Route path="/archive" element={
                 <div>
-                    <NavBar color="shadow-pink-500" selectedPage="archive"/>
+                    <NavBar color="shadow-orange-500" selectedPage="archive"/>
                     <Archive/>
                 </div>
             }/>
             <Route path="/shop" element={
                <div>
-                    <NavBar color="shadow-[#834D69]" selectedPage="shop"/>
+                    <NavBar color="shadow-amber-500" selectedPage="shop"/>
                     <Shop/>
                 </div>
             }/>
             <Route path="/contact" element={
                 <div>
-                    <NavBar color="shadow-emerald-700" selectedPage="contact"/>
+                    <NavBar color="shadow-lime-300" selectedPage="contact"/>
                     <Contact/>
                 </div>
             }/>

@@ -25,13 +25,13 @@ const ArchivedArt = () => {
             {
             listOfImages.map(
                     (image, index) =>    
-                        <div class={`m-8 bg-pink-600 rounded text-transparent hover:text-white text-left relative group`}>
+                        <div class={`m-4 bg-teal-600 rounded text-transparent hover:text-white text-left relative group`}>
                             <img 
                                 key={index} 
                                 src={image} 
                                 alt="info" 
                                 onClick={()=>openModal(image)}
-                                className="h-80 rounded hover:opacity-30" 
+                                className="h-96 rounded hover:opacity-30" 
                             />
                             <h3 className="absolute inset-x-0 bottom-0 m-4">
                                     {imageNames[index]}

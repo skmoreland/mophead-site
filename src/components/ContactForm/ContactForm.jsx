@@ -1,21 +1,21 @@
-import React from "react";
+import React, {useRef} from "react";
+import emailjs from "emailjs-com"
 
 const ContactForm = () => {
-    const [state, setState] = React.useState({
-        firstName: "",
-        lastName: ""
-      })
+    const form = useRef();
 
-      function handleChange(evt) {
-        const value = evt.target.value;
-        setState({
-          ...state,
-          [evt.target.name]: value
-        });
-      }
-    
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        emailjs.sendForm(
+            "service_hg5ih2w",
+            "template_5lvex8b",
+            form.current,
+            "hcMn_NEkcvLZB5Yg2"
+        ).then(
+            result => console.log(result.text),
+            error => console.log(error.text)
+        )
     }
 
     var bgColor = "bg-lime-50"
@@ -23,8 +23,10 @@ const ContactForm = () => {
     var buttonHover = "hover:bg-lime-700"
     var borderColor = "border-lime-400" 
     var buttonShadow = "shadow-lime-500/50"
+
     return (
         <form 
+            ref={form}
             class="font-body text-left text-lg space-y-4"
             onSubmit={handleSubmit}>
             <div>
@@ -35,7 +37,6 @@ const ContactForm = () => {
                         <input 
                             type="text" 
                             name="firstName"
-                            onChange={handleChange}
                             className={`${bgColor} border ${borderColor} text-gray-900 text-sm rounded-lg block w-full p-2.5`}/>
                         </label>
                     </div>
@@ -44,7 +45,6 @@ const ContactForm = () => {
                             <input 
                                 type="text" 
                                 name="lastName"
-                                onChange={handleChange}
                                 class={`${bgColor} border ${borderColor} text-gray-900 text-sm rounded-lg focus:ring-emerald-700 
                                 focus:border-emerald-700 block w-full p-2.5`}/>
                         </label>
@@ -56,7 +56,6 @@ const ContactForm = () => {
                     <input 
                         type="text" 
                         name="email"
-                        onChange={handleChange}
                         class={`${bgColor} border ${borderColor} text-gray-900 text-sm rounded-lg focus:ring-emerald-700 
                         focus:border-emerald-700 block w-full p-2.5`}/>
                 </label>
@@ -66,7 +65,6 @@ const ContactForm = () => {
                     <input 
                         type="text" 
                         name="subject"
-                        onChange={handleChange}
                         class={`${bgColor} border ${borderColor} text-gray-900 text-sm rounded-lg focus:ring-emerald-700 
                         focus:border-emerald-700 block w-full p-2.5`}/>
                 </label>
@@ -76,7 +74,6 @@ const ContactForm = () => {
                     <textarea 
                         rows="4"
                         name="message"
-                        onChange={handleChange} 
                         class={`${bgColor} border ${borderColor} text-gray-900 text-sm rounded-lg focus:ring-emerald-700 
                         focus:border-emerald-700 block w-full p-2.5`}/>
                 </label>

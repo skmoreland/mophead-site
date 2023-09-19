@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/images/MopheadLogo.png";
+import cart from "../../assets/images/Cart2.svg";
 function NavBar(props) {
   var shadowColor = `${props.color}`
   var selectedPage = `${props.selectedPage}`
@@ -12,22 +13,36 @@ function NavBar(props) {
     "contact":""
   }
 
-  selectedPageList[selectedPage] = "text-indigo-900"
+  selectedPageList[selectedPage] = "text-teal-800"
 
   console.log(shadowColor)
   return (
-      <nav className = {`w-screen h-20 flex justify-between items-center px-4 
+      <nav className = {`w-screen h-32 flex justify-center items-center px-4 
       sticky fixed z-50 top-0 z-999 font-title text-white shadow-2xl ${shadowColor} 
-      bg-gradient-to-r from-indigo-900 via-pink-500 to-emerald-700`}>
-        <div className = "text-2xl lg:text-3xl" >
-            <Link to="/">Mophead Art</Link>
-        </div>
-        <div className = "flex justify-between space-x-12 px-4 decoration-4 underline-offset-4 lg:text-xl">
-              <Link to="/" className={`hover:text-indigo-900 ${selectedPageList["home"]}`}>About</Link>
-              <Link to="/available-art" className={`hover:text-indigo-900 ${selectedPageList["available-art"]}`}>Available Artwork</Link>
-              <Link to="/archive" className={`hover:text-indigo-900 ${selectedPageList["archive"]}`}>Work Archive</Link>
-              <Link to="/shop" className={`hover:text-indigo-900 ${selectedPageList["shop"]}`}>Shop</Link>
-              <Link to="/contact" className={`hover:text-indigo-900 ${selectedPageList["contact"]}`}>Contact</Link>
+      bg-gradient-to-r from-teal-800 via-orange-600 to-lime-300`}>
+        <div className = "flex justify-center space-x-12 px-4 decoration-4 items-center underline-offset-4 lg:text-xl">
+              <Link to="/" className={`hover:text-teal-900 w-16 ${selectedPageList["home"]}`}>About</Link>
+              <Link to="/available-art" className={`hover:text-teal-900 w-16 ${selectedPageList["available-art"]}`}>Available Artwork</Link>
+              <Link to="/archive" className={`hover:text-teal-900 w-16 ${selectedPageList["archive"]}`}>Work Archive</Link>
+              <div className = "place-self-center" >
+                  <Link to="/">
+                    <img
+                      alt="Mophead"
+                      src={logo}
+                      className="w-40 place-self-center"
+                    />
+                  </Link>
+              </div>
+              <Link to="/shop" className={`hover:text-teal-900 w-16 ${selectedPageList["shop"]}`}>Shop</Link>
+              <Link to="/contact" className={`hover:text-teal-900 w-16 ${selectedPageList["contact"]}`}>Contact</Link>
+              <div 
+                className="w-16"
+              >
+                <img
+                  alt="cart"
+                  src={cart}
+                />
+              </div>
         </div>
       </nav>
   );

@@ -15,14 +15,17 @@ const ArchivedArt = () => {
             {
             archiveJSON.map(
                     (item) =>    
-                        <div class={`m-4 rounded text-transparent bg-teal-600
+                        <div class={`m-4 rounded text-transparent bg-darkteal
                             text-left relative group`} 
                             onClick={()=>openModal(item)}>
                             <img 
                                 key={item.title} 
                                 src={require(`../../assets/archive/images/${item.image}`)} 
                                 alt={item.title}
-                                className={`h-96 rounded ${transition} hover:opacity-25 text-white`} 
+                                className={`h-96 rounded 
+                                ${transition} hover:opacity-25 
+                                text-white
+                                `} 
                             />
                             
                         </div>

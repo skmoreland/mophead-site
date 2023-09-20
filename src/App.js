@@ -1,6 +1,7 @@
 import AppRouter from './AppRouter'
 import { HashRouter } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <div className="App">
         <AppRouter />
       </div>
+      <Footer />
     </HashRouter>
   );
 }

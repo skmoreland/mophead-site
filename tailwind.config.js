@@ -8,7 +8,7 @@ module.exports = {
       noto: ['Noto Serif'], 
       marker: ['Barrio'],
       mooli: ['Mooli'],
-      title: ['Barrio'],
+      title: ['synthemesc'],
       body: ['Mooli']
     },
     safelist: [
@@ -18,7 +18,9 @@ module.exports = {
     ],
     extend: {
       colors: {
-        'rose': ['#C37DA1']
+        'hotpink': "#FF00CC",
+        'darkteal': "#009999",
+        'neonlime': "#99FF33"
       }
     },
   },

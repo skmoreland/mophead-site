@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Gluten:wght@300&family=Lobster&family=Noto+Serif&family=Permanent+Marker&family=Barrio&family=Mooli&display=swap&display=swap');
+@import url("https://use.typekit.net/toi2fiu.css");
 
 .App {
   text-align: center;

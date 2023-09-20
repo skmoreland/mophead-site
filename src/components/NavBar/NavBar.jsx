@@ -33,8 +33,8 @@ function NavBar(props) {
           decoration-4 underline-offset-4 
           lg:text-2xl text-center`
           }>
-                <Link to="/" className={`hover:text-gray-700 ${pageWidth} ${selectedPageList["home"]}`}>ABOUT</Link>
-                <Link to="/archive" className={`hover:text-gray-700 ${pageWidth} ${selectedPageList["archive"]}`}>WORK ARCHIVE</Link>
+                <Link to="/" className={`hover:text-neutral-700 ${pageWidth} ${selectedPageList["home"]}`}>ABOUT</Link>
+                <Link to="/archive" className={`hover:text-neutral-700 ${pageWidth} ${selectedPageList["archive"]}`}>WORK ARCHIVE</Link>
                 <div  >
                     <Link to="/">
                       <img
@@ -44,8 +44,8 @@ function NavBar(props) {
                       />
                     </Link>
                 </div>
-                <Link to="/shop" className={`hover:text-gray-700 ${pageWidth} ${selectedPageList["shop"]}`}>SHOP</Link>
-                <Link to="/contact" className={`hover:text-gray-700 ${pageWidth} ${selectedPageList["contact"]}`}>CONTACT</Link>
+                <Link to="/shop" className={`hover:text-neutral-700 ${pageWidth} ${selectedPageList["shop"]}`}>SHOP</Link>
+                <Link to="/contact" className={`hover:text-neutral-700 ${pageWidth} ${selectedPageList["contact"]}`}>CONTACT</Link>
           </div>
         </section>
         <section className="lg:hidden p-4">

@@ -11,18 +11,18 @@ const ArchivedArt = () => {
         popupImage=image
     };
     return (
-        <div className="flex flex-wrap z-10 pt-8">
+        <div className="flex justify-center flex-wrap z-10 pt-8">
             {
             archiveJSON.map(
                     (item) =>    
-                        <div class={`m-4 rounded text-transparent bg-darkteal
+                        <div class={`m-1 lg:m-4 rounded text-transparent bg-darkteal
                             text-left relative group`} 
                             onClick={()=>openModal(item)}>
                             <img 
                                 key={item.title} 
                                 src={require(`../../assets/archive/images/${item.image}`)} 
                                 alt={item.title}
-                                className={`h-96 rounded 
+                                className={`h-48 lg:h-96 rounded 
                                 ${transition} hover:opacity-25 
                                 text-white
                                 `} 
@@ -32,8 +32,11 @@ const ArchivedArt = () => {
                     )
             }
             {showModal && (
-                <div className="fixed top-0 left-0 z-[1000] w-screen h-screen bg-black/70 flex justify-center items-center">
-                    <div className="space-y-4 text-white">
+                <div className={`fixed top-0 left-0 z-[1000] 
+                w-screen h-screen 
+                bg-black/70 
+                flex justify-center items-center`}>
+                    <div className="space-y-4 text-white m-4 lg:m-0">
                         <img
                             src={require(`../../assets/archive/images/${popupImage.image}`)}
                             alt="popup"
@@ -49,7 +52,7 @@ const ArchivedArt = () => {
                         <img 
                             src={exitIcon}
                             alt="Close"
-                            className="w-20 hover:fill-black"
+                            className=" w-16 lg:w-20 hover:fill-black"
                         />
                     </button>
                 </div>

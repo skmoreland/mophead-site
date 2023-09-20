@@ -60,7 +60,7 @@ const ContactForm = () => {
 
     const inputStyle = `p-2.5 
                         bg-lime-50
-                        border "border-lime-400" 
+                        border border-lime-400
                         text-gray-900 text-sm 
                         rounded-lg 
                         block w-full outline-none focus:ring-2 focus:ring-lime-700`
@@ -69,11 +69,11 @@ const ContactForm = () => {
         <div>
             <form 
                 ref={form}
-                class="font-body text-left text-lg space-y-4"
+                class={`font-body text-left text-lg space-y-4`}
                 onSubmit={handleSubmit}>
                 <div>
                     <h1>Name</h1>
-                    <div class="grid gap-6 md:grid-cols-2">
+                    <div class={`grid gap-6 md:grid-cols-2`}>
                         <div>
                             <label class="block mb-2 text-sm text-left">First Name
                             <input 
@@ -136,9 +136,9 @@ const ContactForm = () => {
                 flex justify-center items-center
                 w-screen h-screen 
                 bg-black/70  ">
-                    <div className="p-4 w-1/3 space-y-4 
+                    <div className={`p-4 m-4 lg:m-0 space-y-4 
                     bg-lime-100 
-                    border-4 border-lime-600 rounded ">
+                    border-4 border-lime-600 rounded lg:w-1/3`}>
                         <div className="flex justify-between item-center">
                             <h1 className="font-title text-3xl"><b>Message Sent!</b></h1>
                             <button

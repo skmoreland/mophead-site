@@ -3,7 +3,10 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 function Contact() {
     return (
     <div className="Contact font-body text-left space-y-12 m-16">
-        <h1 className="text-6xl font-title pb-4 text-center text-lime-800">CONTACT ME</h1>
+        <h1 className={`pb-4 
+        font-title text-5xl text-center text-lime-800
+        lg:text-6xl`}>
+            CONTACT ME</h1>
         <div>
             <ContactForm />
         </div>

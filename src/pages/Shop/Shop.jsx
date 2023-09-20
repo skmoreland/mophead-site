@@ -1,14 +1,16 @@
 import loadingGraphic from "../../assets/images/LipLoading.gif"
 function Shop() {
     return (
-    <div className="Shop m-16 grid justify-items-center space-y-12">
-      <h1 className="font-title text-rose-800 text-6xl">
-        Mophead shop coming soon!
+    <div className={`Shop grid justify-items-center space-y-8 lg:space-y-12 m-8 lg:m-16`}>
+      <h1 className={` pt-8 lg:pt-0 
+      font-title text-rose-800 text-5xl 
+      lg:text-6xl`}>
+        MOPHEAD SHOP COMING SOON!
       </h1>
       <img
-        alt="Working on it"
+        alt="Check back soon!"
         src={loadingGraphic}
-        className="w-1/2"
+        className="lg:w-1/2"
       />
     </div>
   );

@@ -54,9 +54,9 @@ function NavBar(props) {
             <div className="HAMBURGER-ICON space-y-2"
               onClick={() => setNavOpen((navOpen) => !navOpen)} // toggle isNavOpen state on click
             >
-              <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
-              <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
-              <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+              <span className="block rounded h-0.5 w-8 animate-pulse bg-black"></span>
+              <span className="block rounded h-0.5 w-8 animate-pulse bg-black"></span>
+              <span className="block rounded h-0.5 w-8 animate-pulse bg-black"></span>
             </div>  
           </div>
             {navOpen && (

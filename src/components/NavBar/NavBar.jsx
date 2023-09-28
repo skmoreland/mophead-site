@@ -20,7 +20,7 @@ function NavBar(props) {
   return (
       <nav className = {`w-screen 
       shadow-2xl ${shadowColor} 
-      bg-gradient-to-r from-darkteal via-hotpink to-neonlime
+      bg-gradient-to-r from-purple-600 via-hotpink to-neonlime
       font-title text-white
       `
       }>
@@ -48,7 +48,7 @@ function NavBar(props) {
                 <Link to="/contact" className={`hover:text-neutral-700 ${pageWidth} ${selectedPageList["contact"]}`}>CONTACT</Link>
           </div>
         </section>
-        <section className="lg:hidden p-4">
+        <section className="lg:hidden lg:w-0 p-4">
           <div className="flex justify-between items-center">
             <h1 className="text-3xl"> Mophead Art</h1>
             <div className="HAMBURGER-ICON space-y-2"
@@ -67,10 +67,30 @@ function NavBar(props) {
                 decoration-4 underline-offset-4 
                 text-xl text-center`
                 }>
-                      <Link to="/" className={`hover:text-gray-700 ${selectedPageList["home"]}`}>ABOUT</Link>
-                      <Link to="/archive" className={`hover:text-gray-700 ${selectedPageList["archive"]}`}>WORK ARCHIVE</Link>
-                      <Link to="/shop" className={`hover:text-gray-700 ${selectedPageList["shop"]}`}>SHOP</Link>
-                      <Link to="/contact" className={`hover:text-gray-700 ${selectedPageList["contact"]}`}>CONTACT</Link>
+                      <Link 
+                      to="/" 
+                      onClick={() => setNavOpen((navOpen) => !navOpen)}
+                      className={`hover:text-gray-700 ${selectedPageList["home"]}`}>
+                        ABOUT
+                      </Link>
+                      <Link 
+                      to="/archive" 
+                      onClick={() => setNavOpen((navOpen) => !navOpen)}
+                      className={`hover:text-gray-700 ${selectedPageList["archive"]}`}>
+                        WORK ARCHIVE
+                      </Link>
+                      <Link 
+                      to="/shop" 
+                      onClick={() => setNavOpen((navOpen) => !navOpen)}
+                      className={`hover:text-gray-700 ${selectedPageList["shop"]}`}>
+                        SHOP
+                      </Link>
+                      <Link 
+                      to="/contact" 
+                      onClick={() => setNavOpen((navOpen) => !navOpen)}
+                      className={`hover:text-gray-700 ${selectedPageList["contact"]}`}>
+                        CONTACT
+                      </Link>
                 </div>
               </div>
             )}

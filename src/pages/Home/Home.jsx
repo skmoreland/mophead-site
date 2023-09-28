@@ -7,7 +7,7 @@ function Home() {
     return (
     <div className="Home font-body text-left text-black lg:text-white space-y-8 m-8 lg:m-16 ">
         <h1 className={`font-title text-5xl text-black 
-            lg:text-6xl lg:text-darkteal text-center`}>
+            lg:text-6xl lg:text-purple-700 text-center`}>
             ABOUT ME
         </h1>
         <div className="items-center place-content-center transition-opacity lg:flex">
@@ -24,7 +24,7 @@ function Home() {
             rounded 
             bg-white
             lg:p-8  
-            lg:bg-darkteal
+            lg:bg-purple-700
             lg:-ml-60 lg:w-1/3`}>
                 <h1 className="font-title text-4xl mb-4">MY STORY</h1>
                 <p className="font-body">
@@ -39,7 +39,7 @@ function Home() {
             <div className={`
             bg-white rounded
             lg:p-8  
-            lg:bg-darkteal
+            lg:bg-purple-700
             lg:-mr-60 lg:w-1/3 lg:z-10`}>
                 <img 
                 src = {longneckMobile}

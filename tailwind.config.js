@@ -21,7 +21,21 @@ module.exports = {
         'hotpink': "#FF00CC",
         'darkteal': "#009999",
         'neonlime': "#99FF33"
-      }
+      },
+      keyframes: {
+        openmenu: {
+        // initial position
+            '0%': {down:  '-224px'},
+        // final position
+            '100%': {left:  '0px'}
+        },
+        closemenu: {
+        // initial position
+            '0%': {left:  '0px'},
+        // final position
+            '100%': {down:  '-224px'}
+        },
+    }
     },
   },
   plugins: [],

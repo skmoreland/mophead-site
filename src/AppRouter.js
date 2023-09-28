@@ -11,7 +11,7 @@ function AppRouter() {
         <Routes>
             <Route exact path="/" element={
                 <div>
-                    <NavBar color="shadow-teal-800" selectedPage="home"/>
+                    <NavBar color="shadow-purple-600" selectedPage="home"/>
                     <Home/>
                 </div>
             }/>

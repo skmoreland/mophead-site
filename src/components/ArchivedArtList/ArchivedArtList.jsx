@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import exitIcon from '../../assets/images/exit-icon3.svg'
+import exitIcon from '../../assets/images/BlobClose.png'
 import archiveJSON from '../../assets/archive/archive.json'
 var popupImage = "";
 

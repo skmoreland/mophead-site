@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import emailjs from "emailjs-com"
-import exitIcon from "../../assets/images/exit-icon3.svg"
+import exitIcon from "../../assets/images/BlobClose.png"
 
 const ContactForm = () => {
     const form = useRef();
@@ -43,15 +43,15 @@ const ContactForm = () => {
         if(validForm) {
             openModal()
         
-            emailjs.sendForm(
-                "service_hg5ih2w",
-                "template_5lvex8b",
-                form.current,
-                "hcMn_NEkcvLZB5Yg2"
-            ).then(
-                result => console.log(result.text),
-                error => console.log(error.text)
-            )
+            // emailjs.sendForm(
+            //     "service_hg5ih2w",
+            //     "template_5lvex8b",
+            //     form.current,
+            //     "hcMn_NEkcvLZB5Yg2"
+            // ).then(
+            //     result => console.log(result.text),
+            //     error => console.log(error.text)
+            // )
         } else {
             var alertMsg = `INVALID FORM: Please fill out the following fields before submitting the form: ${missingFields.join(', ')}`
             alert(alertMsg)
@@ -139,7 +139,7 @@ const ContactForm = () => {
                     <div className={`p-4 m-4 lg:m-0 space-y-4 
                     bg-lime-100 
                     border-4 border-lime-600 rounded lg:w-1/3`}>
-                        <div className="flex justify-between item-center">
+                        <div className="flex justify-between items-center">
                             <h1 className="font-title text-3xl"><b>Message Sent!</b></h1>
                             <button
                                 onClick={openModal}
@@ -148,7 +148,7 @@ const ContactForm = () => {
                                 <img 
                                     src={exitIcon}
                                     alt="Close"
-                                    className="w-8 hover:fill-black"
+                                    className="w-12 hover:fill-black"
                                 />
                             </button>
                         </div>
